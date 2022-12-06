@@ -1,0 +1,26 @@
+//Girilen yılın artık yıl olup olmadığını kontrol eden program.
+
+import java.util.Scanner;
+
+public class main {
+ 
+ public static void main(String[] args)
+    {
+		//Artık yıllar ya 4 e 100 e ve 400 e tam bölünen
+		//             ya da 4 e bölünüp 100 e bölünmeyen yıllardır.
+        Scanner giris = new Scanner(System.in);
+        System.out.print("Yil girin: ");
+        int yil = giris.nextInt();
+
+        System.out.println(artikYilMi(yil));
+    }
+ 
+ public static boolean artikYilMi(int y)
+    {
+        boolean a = (y % 4) == 0;
+        boolean b = (y % 100) != 0;
+        boolean c = ((y % 100 == 0) && (y % 400 == 0));
+
+        return a && (b || c);
+    }
+}
