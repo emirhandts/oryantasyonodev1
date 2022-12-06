@@ -1,0 +1,21 @@
+//Girilen metindeki son kelimenin uzunluğunu bulan program.
+
+import java.util.*;
+public class main {  
+ public static void main(String[] args) {
+        String metin = "Son kelimenin uzunlugu";
+		System.out.println("Metin: "+metin);
+        System.out.println("Verilen metindeki son kelimenin uzunlugu: "+sonKelimeUzunlugu(metin));
+    }
+
+    public static int sonKelimeUzunlugu(String metin) {
+        int kelimeuzunlugu = 0;
+        String[] kelimeler = metin.split(" ");
+        if(kelimeler.length>0) {
+            kelimeuzunlugu = kelimeler[kelimeler.length-1].length();			
+        } else {
+            kelimeuzunlugu = 0;
+        }
+        return kelimeuzunlugu;
+    }
+}
