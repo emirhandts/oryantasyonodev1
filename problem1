@@ -1,0 +1,14 @@
+//Mevcut nakit miktarının ürün fiyatından çok mu az mı olduğunu hesaplayan program.
+
+public class main {
+	public static boolean nakitYeterMi(int[] nakit, double urunFiyat) {
+        int ellilikno = nakit[0];
+        int yirmilikno = nakit[1];
+        int onlukno = nakit[2];
+        int beslikno = nakit[3];
+
+        double toplam = (ellilikno * 50) + (yirmilikno * 20) + (onlukno * 10) + (beslikno * 5);
+        
+        return toplam >= urunFiyat;
+    }
+}
