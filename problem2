@@ -1,0 +1,9 @@
+//Bir sayı dizisindeki en büyük değer ile en küçük değer arasındaki farkı hesaplayan program.
+
+import java.util.Arrays;
+public class main {
+	public static int farkBuyukKucuk(int[] sayilar) {
+		Arrays.sort(sayilar);
+		return arr[sayilar.length-1]-sayilar[0];
+	}
+}
