@@ -1,0 +1,27 @@
+//Çıkarma işlemi kullanarak iki sayıyı bölen program.
+
+import java.util.Scanner;
+public class main {	
+	public static float cikarmailebolme(int bolunen, int bolen) {
+	if (bolen == 0) {
+       return 0;
+	}	   
+    float result = 0;
+    while (bolunen > bolen) {
+      bolunen -= bolen;
+      result++;
+    }
+    float ondaliklikisim = (float) bolunen / (float) bolen;
+    result += ondaliklikisim;
+    return result;
+  }	
+	
+    public static void main(String[] args) {
+ Scanner giris = new Scanner(System.in);
+        System.out.print("Input the bolunen: ");
+        int bolunen = giris.nextInt();
+		System.out.print("Input the bolen: ");
+        int bolen = giris.nextInt();
+		System.out.println("\nSonuc: " + cikarmailebolme(bolunen,bolen));		
+		}
+}
