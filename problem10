@@ -1,0 +1,15 @@
+//Girilen doğum yılına göre ehliyet alınıp alınamayacağını kontrol eden program.
+
+import java.util.Scanner;
+
+public class test {
+	public static void main(String[] args)
+	{
+		Scanner giris = new Scanner(System.in);
+	
+		System.out.print("Bir yil giriniz: ");
+		int yil = giris.nextInt();
+		if (yil <= 2022) System.out.println("Ehliyet alabilirsiniz.");
+		
+	}
+}
